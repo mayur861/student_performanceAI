@@ -1,0 +1,26 @@
+{
+    "target": "math_score",
+    "best_model": "Ridge Regression",
+    "features": [
+        "gender",
+        "race_ethnicity",
+        "parental_level_of_education",
+        "lunch",
+        "test_preparation_course",
+        "reading_score",
+        "writing_score"
+    ],
+    "categorical_features": [
+        "gender",
+        "race_ethnicity",
+        "parental_level_of_education",
+        "lunch",
+        "test_preparation_course"
+    ],
+    "numeric_features": [
+        "reading_score",
+        "writing_score"
+    ],
+    "dataset_rows": 1000,
+    "test_size": 0.2
+}
