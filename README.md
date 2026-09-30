@@ -128,24 +128,6 @@ Open:
 http://127.0.0.1:5000
 ```
 
-## Important interview explanation
-
-**Why Pipeline?**
-
-Pipeline prevents preprocessing mismatch between training and prediction. The same fitted imputer, scaler and encoder used during training are automatically applied to new user input.
-
-**Why ColumnTransformer?**
-
-Because the dataset contains both numeric and categorical features, and each type needs different preprocessing.
-
-**Why handle_unknown="ignore"?**
-
-If the Flask UI sends a category not seen during training, the encoder will not crash.
-
-**Why save the whole pipeline?**
-
-Instead of separately saving preprocessing objects and the model, one `.joblib` file contains the complete prediction workflow.
-
 ## Project structure
 
 ```text
@@ -171,13 +153,3 @@ student_performance_prediction/
 └── README.md
 ```
 
-## Future improvements
-
-- Add SHAP explainability
-- Add prediction history
-- Add student risk category
-- Add SQLite database
-- Add Docker deployment
-- Deploy on Render/Railway/Azure
-- Add REST API endpoint
-- Add model monitoring
